@@ -59,4 +59,31 @@ function check() {
 
 
 
+let list = document.getElementById('mylist')
+let masse = document.getElementById('masse')
+let briefPost = "<b>Brief und Postkarte</b>L: 10 - 23,5 cm<br>B: 7 - 12,5 cm<br>H: bis 1 cm "
+let twoKg = "<b>DHL Paket 2 kg</b><br>bis 60 x 30 x 15 cm"
+let fiveKg = "<b>DHL Paket 5 kg</b> <br>bis 120 x 60 x 60 cm"
+let tenKg = "<b>DHL Paket 10 kg</b> <br>bis 120 x 60 x 60 cm "
+
+function showtxt() {
+    switch (list.value) {
+        case "0":
+            masse.innerHTML = briefPost;
+            break;
+        case "1":
+            masse.innerHTML = twoKg
+            break;
+        case "2":
+            masse.innerHTML = fiveKg
+            break;
+        case "3":
+            masse.innerHTML = tenKg
+            break;
+        default:
+            masse.innerHTML = "Extra große Größe"
+    }
+}
+
+
 
